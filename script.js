@@ -40,6 +40,9 @@ window.onload = function(){
     document.addEventListener('keyup',moveSnake)
     //move to new position every 0.2seconds
     setInterval(update,1000/5) 
+
+
+    document.addEventListener('keydown',Pause)
 }
 
 //Function updating game
@@ -136,5 +139,11 @@ function moveSnake(e){
         moveX = -1;
         moveY = 0
     }
+}
+
+//Pause and Play functionality
+function Pause(e){
+    if(e.key == ' ')
+    alert("Game paused")
 }
 
